@@ -7,7 +7,7 @@ Configuration needed in AWS instance in order to allow github-aws-jenkins intera
 $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 
-$ chmod 777 /var/run/docker.sock
+$ sudo chmod 777 /var/run/docker.sock
 $ sudo usermod -a -G docker jenkins
 
 Then restart jenkins:
@@ -25,3 +25,8 @@ Jenkins.instance.getItemByFullName("JobName")
                 
 4- In case docker daemon is stop execute:
 systemctl start docker
+o sino:
+sudo service docker start
+
+5-
+$ newgrp docker
